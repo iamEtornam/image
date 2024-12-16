@@ -35,7 +35,7 @@ class IccProfile {
     if (compression == IccProfileCompression.none) {
       return data;
     }
-    data = const ZLibDecoder().decodeBytes(data);
+    data = const ZLibDecoder().decodeBytes(data.toList());
     compression = IccProfileCompression.none;
     return data;
   }
